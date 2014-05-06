@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE web-app
+    PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+    "http://java.sun.com/dtd/web-app_2_3.dtd">
+
+<web-app>
+
+  <!-- Servlets -->
+  <servlet>
+    <servlet-name>QueryServlet</servlet-name>
+    <servlet-class>partable.webdb.server.QueryServlet</servlet-class>
+  </servlet>
+  
+  <servlet>
+    <servlet-name>UpdateServlet</servlet-name>
+    <servlet-class>partable.webdb.server.UpdateServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>BulkDeleteServlet</servlet-name>
+    <servlet-class>partable.webdb.server.BulkDeleteServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>QueryServlet</servlet-name>
+    <url-pattern>/query/*</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>QueryServlet</servlet-name>
+    <url-pattern>/partxml</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>UpdateServlet</servlet-name>
+    <url-pattern>/update</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>BulkDeleteServlet</servlet-name>
+    <url-pattern>/bulkdelete</url-pattern>
+  </servlet-mapping>
+  
+  <!-- Default page to serve -->
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+
+	<security-constraint>
+	    <web-resource-collection>
+	        <url-pattern>/admin/*</url-pattern>
+	    </web-resource-collection>
+	    <auth-constraint>
+	        <role-name>admin</role-name>
+	    </auth-constraint>
+	</security-constraint>
+</web-app>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cronentries>
+  <cron>
+    <url>/update?action=updatelist</url>
+    <description>Look for new parts in the list from partsregistry</description>
+    <schedule>every 48 hours</schedule>
+  </cron>
+  <cron>
+  	<url>/empty.jsp</url>
+  	<description>Keep an instance live</description>
+  	<schedule>every 5 minutes</schedule>
+  </cron>
+</cronentries>

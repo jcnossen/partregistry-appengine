@@ -1,0 +1,18 @@
+<queue-entries>
+  <queue>
+    <name>default</name>
+    <rate>1/s</rate>
+  </queue>
+  <queue>
+    <name>updatelist</name>
+    <rate>5/s</rate>
+  </queue>
+  <queue>
+    <name>reload</name>
+    <rate>10/m</rate>
+  </queue>
+  <queue>
+    <name>bulkdelete</name>
+    <rate>5/s</rate>
+  </queue>
+</queue-entries>
